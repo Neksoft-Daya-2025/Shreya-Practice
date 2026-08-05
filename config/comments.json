@@ -1,0 +1,55 @@
+{
+    "comments": [
+        {
+            "id": "c-1780398305-4f9ee5f7",
+            "post_id": "1",
+            "name": "John Doe",
+            "email": "john@example.com",
+            "rating": 5,
+            "comment": "Excellent article! Very informative and well-written. This helped me understand BMS technology better.",
+            "date": "June 2, 2026",
+            "created_at": "2026-06-02T11:05:05+00:00"
+        },
+        {
+            "id": "c-1780398305-bdfda030",
+            "post_id": "1",
+            "name": "Sarah Smith",
+            "email": "sarah@example.com",
+            "rating": 4,
+            "comment": "Great content, but I would love to see more examples of real-world applications.",
+            "date": "June 2, 2026",
+            "created_at": "2026-06-02T11:05:05+00:00"
+        },
+        {
+            "id": "c-1780398306-8de95b50",
+            "post_id": "1",
+            "name": "Mike Johnson",
+            "email": "mike@example.com",
+            "rating": 5,
+            "comment": "Perfect guide for beginners. The explanations are clear and easy to follow.",
+            "date": "June 2, 2026",
+            "created_at": "2026-06-02T11:05:06+00:00"
+        },
+        {
+            "id": "c-1780398306-016e58d1",
+            "post_id": "1",
+            "name": "Madhuri Mishra",
+            "email": "jhamadhuri1979@gmail.com",
+            "rating": 4,
+            "comment": "Will be the best gift for my daughter on her upcoming birthday.",
+            "date": "June 2, 2026",
+            "created_at": "2026-06-02T11:05:06+00:00"
+        },
+        {
+            "id": "c-1780398307-1ead3abf",
+            "post_id": "1",
+            "name": "Ruchi Saumya",
+            "email": "ruchisaumya@gmail.com",
+            "rating": 4,
+            "comment": "Opting once, makes the sales.\nOpting again builds up the trust. Telling good about the product, makes the brand. \nAnd Ligen Power has got all.",
+            "date": "June 2, 2026",
+            "created_at": "2026-06-02T11:05:07+00:00"
+        }
+    ],
+    "updated_at": "2026-06-02T11:05:07+00:00"
+}

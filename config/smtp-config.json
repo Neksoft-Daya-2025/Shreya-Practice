@@ -1,0 +1,10 @@
+{
+    "host": "smtp.hostinger.com",
+    "port": "465",
+    "username": "info@ligenpower.com",
+    "password": "Welcome@2026@#",
+    "fromEmail": "info@ligenpower.com",
+    "fromName": "Ligen Power",
+    "encryption": "ssl",
+    "recipientEmail": "info@ligenpower.com"
+}
