@@ -42,3 +42,6 @@ A standalone HTML website - ready to edit and use!
 3. That's it! You're ready to go.
 
 Happy editing!
+## Maintained By
+
+Neksoft-Daya-2025
