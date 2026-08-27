@@ -40,6 +40,7 @@ A standalone HTML website - ready to edit and use!
 1. Open `index.html` in your browser to view
 2. Open `index.html` in a text editor to edit
 3. That's it! You're ready to go.
+4. Deployment test - GitHub Actions to Hostinger VPS successful.
 
 Happy editing!
 ## Maintained By
