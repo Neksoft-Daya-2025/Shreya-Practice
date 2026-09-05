@@ -1,7 +1,9 @@
 name: Test VPS SSH Key
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   test:
