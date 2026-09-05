@@ -1,4 +1,4 @@
-# SSH deployment test
+# SSH deployment test 2
 name: Test VPS SSH Key
 
 on:
