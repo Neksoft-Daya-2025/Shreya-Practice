@@ -1,5 +1,5 @@
 # SSH deployment test 4
-name: Test VPS SSH Key
+name: Deploy to VPS
 
 on:
   push:
@@ -7,26 +7,43 @@ on:
       - main
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check SSH key fingerprint
-        env:
-          SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
-        run: |
-          printf '%s\n' "$SSH_KEY" > /tmp/deploy_key
-          chmod 600 /tmp/deploy_key
-          ssh-keygen -y -f /tmp/deploy_key | ssh-keygen -lf -
-
-      - name: Test SSH authentication
+      - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
+
           script: |
-            echo "SSH authentication successful"
-            hostname
-            whoami
+            set -e
+
+            echo "Starting deployment..."
+
+            cd /var/www/shreya-practice
+
+            echo "Pulling latest code..."
+            git pull origin main
+
+            echo "Installing Merchant dependencies..."
+            cd merchant
+            composer install --no-dev --optimize-autoloader
+
+            echo "Clearing Laravel cache..."
+            php artisan optimize:clear
+
+            echo "Installing Warranty dependencies..."
+            cd ../warranty
+            composer install --no-dev --optimize-autoloader
+
+            echo "Reloading Nginx..."
+            sudo systemctl reload nginx
+
+            echo "Checking Nginx..."
+            sudo systemctl is-active nginx
+
+            echo "Deployment completed successfully."
