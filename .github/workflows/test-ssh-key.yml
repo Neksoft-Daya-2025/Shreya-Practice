@@ -27,7 +27,7 @@ jobs:
             cd /var/www/shreya-practice
 
             echo "Pulling latest code..."
-            git pull origin main
+            GIT_SSH_COMMAND="ssh -i ~/.ssh/github_deploy -o IdentitiesOnly=yes" git pull origin main
 
             echo "Installing Merchant dependencies..."
             cd merchant
